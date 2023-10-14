@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./surveyForm.css">
+</head>
+<body>
+    <div class="my-form">
+        <h1> Survey Form</h1>
+        <form action="" id="surveyForm" onsubmit="return false;">
+            <div class="form-group">
+                <label for="">First Name :</label><br>
+                <input class="my-input" type="text" id="fname"  required>
+            </div>
+            <div class="form-group">
+                <label for="">Last Name :</label><br>
+                <input class="my-input" type="text" id="lname" required>
+            </div>
+            <div class="form-group">
+                <label for=""> Date Of Birth :</label><br>
+                <input type="date" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="">Country :</label><br>
+               <select class="my-input" id="country" required >
+                <option value="" >--select--</option>
+                <option value="">India</option>
+                <option value="">America</option>
+                <option value="">Japan</option>
+               </select>
+           </div>
+           <div class="form-group">
+            <label>Gender :</label>
+            <input type="checkbox" id="male" name="gender" > Male
+             <input type="checkbox" id="female" name="gender"> Female
+            </div> 
+            <div class="form-group">
+            <label for="">Profession :</label><br>
+            <input class="my-input" type="text" id="profession" required>
+            </div>
+            <div class="form-group">
+            <label for=""> Email :</label><br>
+            <input class="my-input" type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for=""> Mobile Number :</label><br>
+            <input class="my-input" type="tel" id="mobile" pattern="[0-9]{10}" required>
+        </div>
+        <div class="btn-group">
+           <buttonc class="btn-1" onclick="onSubmit()" type="submit">submit</buttonc>
+        
+            <button class="btn-2" type="reset">reset</button>
+        </div>
+        </form>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Survey Summary</h2>
+            <ul id="summaryList"></ul>
+        </div>
+    </div>
+
+
+
+
+    <script src="./surveyForm.js"></script>
+</body>
+</html>
